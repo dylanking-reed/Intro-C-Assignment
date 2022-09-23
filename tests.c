@@ -1,6 +1,7 @@
 #include "moving.h"
 #include "finding-divisors.h"
 #include "powers.h"
+#include "fibonacci.h"
 #include <assert.h>
 #include <string.h>
 #include <stdint.h>
@@ -62,11 +63,20 @@ void powers_test() {
   assert(powers(18) == 5);
 }
 
+void fibonacci_test() {
+  assert(fib(1) == 1);
+  assert(fib(2) == 1);
+  assert(fib(3) == 2);
+  assert(fib(4) == 3);
+  assert(fib(5) == 5);
+}
+
 int main(void) {
   printf("Testing...\n");
   moving_test();
   finding_divisors_test();
   powers_test();
+  fibonacci_test();
   printf("Tests passed.\n");
   return 0;
 }
